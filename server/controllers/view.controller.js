@@ -9,4 +9,4 @@ class ViewController extends BaseController {
     }
 }
 
-module.exports = ViewController
+module.exports = ViewController;
