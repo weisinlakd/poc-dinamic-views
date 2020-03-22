@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const ViewController = require('../controllers/view.controller');
+const viewController = new ViewController ()
 
-const ViewController = new (require('../controllers/view.controller'))()
-
-router.route('/get-view').get(ViewController.getView)
+router.route('/get-view').get(viewController.getView)
 
 module.exports = router;
