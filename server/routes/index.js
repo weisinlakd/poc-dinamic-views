@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-router.route('/get-view').get( (req, res) => {
-    res.send('Soy la vista papu');
-});
+const ViewController = new (require('../controllers/view.controller'))()
+
+router.route('/get-view').get(ViewController.getView)
 
 module.exports = router;
